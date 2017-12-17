@@ -1,0 +1,6 @@
+D:\projects\git\TestApi\TestApi.Data\bin\Debug\TestApi.Data.dll
+D:\projects\git\TestApi\TestApi.Data\bin\Debug\TestApi.Data.pdb
+D:\projects\git\TestApi\TestApi.Data\obj\Debug\TestApi.Data.csprojResolveAssemblyReference.cache
+D:\projects\git\TestApi\TestApi.Data\obj\Debug\TestApi.Data.csproj.CoreCompileInputs.cache
+D:\projects\git\TestApi\TestApi.Data\obj\Debug\TestApi.Data.dll
+D:\projects\git\TestApi\TestApi.Data\obj\Debug\TestApi.Data.pdb

@@ -1,0 +1,16 @@
+D:\projects\git\TestApi\TestApi.Core\bin\Debug\TestApi.Core.dll
+D:\projects\git\TestApi\TestApi.Core\bin\Debug\TestApi.Core.pdb
+D:\projects\git\TestApi\TestApi.Core\bin\Debug\Newtonsoft.Json.dll
+D:\projects\git\TestApi\TestApi.Core\bin\Debug\System.Net.Http.Formatting.dll
+D:\projects\git\TestApi\TestApi.Core\bin\Debug\System.Web.Http.dll
+D:\projects\git\TestApi\TestApi.Core\bin\Debug\Newtonsoft.Json.xml
+D:\projects\git\TestApi\TestApi.Core\bin\Debug\System.Net.Http.Formatting.xml
+D:\projects\git\TestApi\TestApi.Core\bin\Debug\System.Web.Http.xml
+D:\projects\git\TestApi\TestApi.Core\bin\Debug\de\System.Net.Http.Formatting.resources.dll
+D:\projects\git\TestApi\TestApi.Core\bin\Debug\de\System.Web.Http.resources.dll
+D:\projects\git\TestApi\TestApi.Core\obj\Debug\TestApi.Core.csprojResolveAssemblyReference.cache
+D:\projects\git\TestApi\TestApi.Core\obj\Debug\TestApi.Core.csproj.CoreCompileInputs.cache
+D:\projects\git\TestApi\TestApi.Core\obj\Debug\TestApi.Core.dll
+D:\projects\git\TestApi\TestApi.Core\obj\Debug\TestApi.Core.pdb
+D:\projects\git\TestApi\TestApi.Core\bin\Debug\TestApi.Data.dll
+D:\projects\git\TestApi\TestApi.Core\bin\Debug\TestApi.Data.pdb
