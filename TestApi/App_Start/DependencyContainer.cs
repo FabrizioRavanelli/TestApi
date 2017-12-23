@@ -24,10 +24,7 @@ namespace TestApi.App_Start
             builder.RegisterWebApiFilterProvider(configuration);
 
             // Register all services.
-            //TODO register alle services....
-            builder.RegisterType<LeagueService>();
-            builder.RegisterType<PlayerService>();
-            builder.RegisterType<TeamService>();
+            builder.RegisterModule<ServiceModule>();
 
             //builder.RegisterModule(new ServiceModule());
             //builder.RegisterType<LeagueService>().As<LeagueService>().InstancePerRequest();

@@ -8,6 +8,7 @@ using TestApi.Core.Models;
 using TestApi.Core.Services;
 using System.Net.Http;
 using System.Net;
+using TestApi.Core.Infrastructure.Messages;
 
 namespace TestApi.Core.Controllers
 {
@@ -39,7 +40,8 @@ namespace TestApi.Core.Controllers
         public HttpResponseMessage GetLeague(int idLeague)
         {
             var league = _service.GetLeagueById(idLeague);
-            return Request.CreateResponse(HttpStatusCode.OK, league);
+            //return Request.CreateResponse(HttpStatusCode.OK, league);
+            return Request.CreateReturnObjectResponse(ret, () => oInitializeNl);
         }
 
         [HttpGet]
@@ -48,7 +50,8 @@ namespace TestApi.Core.Controllers
         public HttpResponseMessage GetLeagues()
         {
             var leagues = _service.GetLeagues();
-            return Request.CreateResponse(HttpStatusCode.OK, leagues); 
+            //return Request.CreateResponse(HttpStatusCode.OK, leagues);
+            return Request.CreateReturnObjectResponse(ret, () => oInitializeNl);
         }
         #endregion
 

@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Autofac;
 
 namespace TestApi.Core.Services
 {
-    public class ServiceModule //: ContainerBuilder
+    public class ServiceModule : Module
     {
-        //TODO register alle services....
-        //protected override void Load(ContainerBuilder builder)
-        //{
-        //}
+        protected override void Load(ContainerBuilder oBuilder)
+        {
+            //oBuilder.RegisterType<UserSessionStateCache>().SingleInstance();
+            oBuilder.RegisterType<LeagueService>();
+            oBuilder.RegisterType<PlayerService>();
+            oBuilder.RegisterType<TeamService>();
+        }
     }
 }

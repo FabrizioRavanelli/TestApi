@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TestApi.Data.Entities;
 using TestApi.Core.Models;
 using TestApi.Core.Infrastructure;
+using TestApi.Core.Infrastructure.Messages;
 
 namespace TestApi.Core.Services
 {
@@ -15,17 +16,12 @@ namespace TestApi.Core.Services
 
         #region Public
 
-        public ResultBase<LeagueModel> GetLeagueById(int idLeague)
+        public ReturnObject GetLeagueById(int idLeague)
         {
-            var resultValidation = ValidateIdLeague(idLeague);
-            if (!resultValidation.Success)
-            {
-                return new ResultBase<LeagueModel>()
-                {
-                    Success = false,
-                    Message = resultValidation.Message
-                };
-            }
+            ReturnObject ret = ReturnObject.GetInstanceSuccess();
+
+            ret = ValidateIdLeague(idLeague);
+            if (ret.IsError) { return ret; }
 
             var leagueModel = new LeagueModel();
             leagueModel.LeagueId = 1;
@@ -35,16 +31,14 @@ namespace TestApi.Core.Services
             leagueModel.SortIndex = 1;
             leagueModel.IsTopLeague = true;
 
-            var result = new ResultBase<LeagueModel>()
-            {
-                Success = true,
-                Result = leagueModel
-            };
-            return result;
+            //TODO leagueModel zurück liefern....
+            return ret;
         }
 
-        public ResultBase<List<LeagueModel>> GetLeagues()
+        public ReturnObject GetLeagues()
         {
+            ReturnObject ret = ReturnObject.GetInstanceSuccess();
+
             var leagueModel1 = new LeagueModel();
             leagueModel1.LeagueId = 1;
             leagueModel1.LeagueName = "Primera Division";
@@ -71,29 +65,27 @@ namespace TestApi.Core.Services
             leagues.Add(leagueModel1);
             leagues.Add(leagueModel2);
             leagues.Add(leagueModel3);
-            var result = new ResultBase<List<LeagueModel>>()
-            {
-                Success = true,
-                Result = leagues
-            };
-            return result;
+
+            //TODO leagues zurück liefern....
+            return ret;
         }
 
         #endregion
 
         #region Private
 
-        private ResultBase<bool> ValidateIdLeague(int idLeague)
+        private ReturnObject ValidateIdLeague(int idLeague)
         {
-            var result = new ResultBase<bool>();
+            ReturnObject ret = ReturnObject.GetInstanceSuccess();
             if (idLeague > 1)
             {
-                result.Success = false;
-                result.Message = "IdLeague doesn't exist";
-                return result;
+                ret = WebApiErrors.InvalidApiCall();
+                //result.Success = false;
+                //result.Message = "IdLeague doesn't exist";
+                //return result;
             }
-            result.Success = true;
-            return result;
+            //result.Success = true;
+            return ret;
         }
 
         private LeagueModel ToLeagueModel(League league)
